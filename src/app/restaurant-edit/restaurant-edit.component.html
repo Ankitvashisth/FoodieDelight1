@@ -1,0 +1,41 @@
+<div class="edit-restaurant-container">
+    <h2>Edit Restaurant</h2>
+    <form [formGroup]="editRestaurantForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label for="name">Name *</label>
+            <input id="name" type="text" formControlName="name" [ngClass]="{ 'is-invalid': editRestaurantForm.get('name')?.errors}">
+            <div *ngIf="editRestaurantForm.get('name')?.errors" class="invalid-feedback">
+                <div >Name is required</div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="description">Description *</label>
+            <input id="description" type="text" formControlName="description" [ngClass]="{ 'is-invalid': editRestaurantForm.get('description')?.errors }">
+            <div *ngIf="editRestaurantForm.get('description')?.errors" class="invalid-feedback">
+                <div >Description is required</div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="location">Location *</label>
+            <input id="location" type="text" formControlName="location" [ngClass]="{ 'is-invalid': editRestaurantForm.get('location')?.errors}">
+            <div *ngIf="editRestaurantForm.get('location')?.errors" class="invalid-feedback">
+                <div >Location is required</div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="rating">Rating *</label>
+            <input id="rating" type="number" formControlName="rating" [ngClass]="{ 'is-invalid': editRestaurantForm.get('rating')?.errors }">
+            <div *ngIf="editRestaurantForm.get('rating')?.errors" class="invalid-feedback">
+                <div >Rating is required and it must be less than or equal to 5</div>
+                
+            </div>
+        </div>
+
+        <button [disabled]="editRestaurantForm.invalid" type="submit" class="btn btn-primary">Update</button>
+    </form>
+</div>
+
+

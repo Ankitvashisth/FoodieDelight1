@@ -1,0 +1,38 @@
+<div class="edit-restaurant-container">
+    <h2>Add Restaurant</h2>
+    <form [formGroup]="addRestaurantForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label for="name">Name *</label>
+            <input id="name" type="text" formControlName="name" [ngClass]="{ 'is-invalid': addRestaurantForm.get('name')?.touched && addRestaurantForm.get('name')?.errors}">
+            <div *ngIf="addRestaurantForm.get('name')?.touched && addRestaurantForm.get('name')?.errors" class="invalid-feedback">
+                <div >Name is required</div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="description">Description *</label>
+            <input id="description" type="text" formControlName="description" [ngClass]="{ 'is-invalid':addRestaurantForm.get('description')?.touched && addRestaurantForm.get('description')?.errors }">
+            <div *ngIf="addRestaurantForm.get('description')?.touched && addRestaurantForm.get('description')?.errors" class="invalid-feedback">
+                <div >Description is required</div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="location">Location *</label>
+            <input id="location" type="text" formControlName="location" [ngClass]="{ 'is-invalid': addRestaurantForm.get('location')?.touched && addRestaurantForm.get('location')?.errors}">
+            <div *ngIf=" addRestaurantForm.get('location')?.touched && addRestaurantForm.get('location')?.errors" class="invalid-feedback">
+                <div >Location is required</div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="rating">Rating *</label>
+            <input id="rating" type="number" formControlName="rating" [ngClass]="{ 'is-invalid': addRestaurantForm.get('rating')?.touched && addRestaurantForm.get('rating')?.errors }">
+            <div *ngIf=" addRestaurantForm.get('rating')?.touched && addRestaurantForm.get('rating')?.errors" class="invalid-feedback">
+                <div >Rating is required and it must be less than or equal to 5</div>
+                
+            </div>
+        </div>
+        <button [disabled]="addRestaurantForm.invalid" type="submit" class="btn btn-primary">Add</button>
+    </form>
+</div>
