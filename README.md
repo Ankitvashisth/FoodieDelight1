@@ -1,13 +1,13 @@
 # FoodieDelight
 
 ## Problem Statement
-The task was to create a functionality for managing restaurants on a platform, which includes:
+   The task was to create a functionality for managing restaurants on a platform, which includes:
 
-Adding a new restaurant.
-Modifying an existing restaurant's details.
-Deleting a restaurant.
-Listing all restaurants.
-The data interactions are done via asynchronous API calls, and the application must ensure responsiveness, usability, and data validation.
+   Adding a new restaurant.
+   Modifying an existing restaurant's details.
+   Deleting a restaurant.
+   Listing all restaurants.
+   The data interactions are done via asynchronous API calls, and the application must ensure responsiveness, usability, and data validation.
 
 ## Task Breakdown
   ### Setup and Environment:
