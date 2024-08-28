@@ -26,6 +26,8 @@
      Data Validations: Implemented validation for form fields to ensure data integrity.
      Responsiveness: Styled components to ensure they are responsive and user-friendly.
      Navigation: Utilized Angular Router for navigation between components.
+     Deactivate Guard: Added a deactivate guard to prevent users from accidentally navigating away from the "Add Restaurant" or "Edit Restaurant" forms without 
+     saving their changes. This ensures that any unsaved data is not lost.
 
 ## Setup and Installation
 
